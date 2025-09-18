@@ -68,12 +68,10 @@ def run_ocr():
             cmd = [
                 "ocrmypdf",
                 "--language", "chi_tra+eng",
-                "--deskew",
                 "--rotate-pages",
-                "--remove-background",
                 "--optimize", "3",
                 "--output-type", "pdf",
-                "--jobs", "4",
+                "--jobs", "8",
                 input_path,
                 output_path
             ]
