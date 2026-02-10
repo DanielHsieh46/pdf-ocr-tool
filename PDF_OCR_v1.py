@@ -67,6 +67,7 @@ def run_ocr():
             # 用 subprocess 執行 ocrmypdf
             cmd = [
                 "ocrmypdf",
+                "--force-ocr",                
                 "--language", "chi_tra+eng",
                 "--rotate-pages",
                 "--optimize", "3",
@@ -75,6 +76,7 @@ def run_ocr():
                 input_path,
                 output_path
             ]
+
             current_process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = current_process.communicate()
 
